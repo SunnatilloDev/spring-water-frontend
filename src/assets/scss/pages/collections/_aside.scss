@@ -1,0 +1,136 @@
+.collections {
+  &-aside {
+
+
+    @include media(900) {
+      width: 100%;
+      position: sticky;
+      top: 0px;
+      z-index: 50;
+      padding: 20px 0;
+      background-color: #fff;
+      @include flex(baseline, space-between);
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+
+.aside {
+
+  &-head {
+
+
+    &__title {
+      font-size: 12px;
+      color: $gray-300;
+    }
+  }
+
+  &-content {
+
+    &__category {
+      margin-top: 10px;
+
+      @include media(900) {
+        display: none;
+      }
+    }
+
+    &__button {
+      font-size: 13px;
+      text-transform: uppercase;
+      padding: 8px 18px;
+      border: 1px solid $black;
+      background-color: $gray-100;
+      display: none;
+
+      @include media(900) {
+        display: block;
+        @include center();
+        gap: 8px;
+      }
+
+      @include media(440) {
+        font-size: 12px;
+        padding: 6px 16px;
+      }
+    }
+  }
+
+  &-category {
+
+
+    &__title {
+      color: $gray-500;
+      font-size: 14px;
+      font-weight: 500;
+      margin: 6px 0;
+    }
+
+    &__content {
+      @include hover() {
+        &:hover> :not(:hover) {
+          opacity: .6;
+        }
+      }
+    }
+
+    &__link {
+      padding: 4px;
+      font-size: 12px;
+      cursor: pointer;
+
+      a {
+        display: block;
+      }
+    }
+
+
+  }
+}
+
+
+
+
+
+
+
+
+.custom-checkbox .checkmark {
+  width: 26px;
+  height: 26px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.custom-checkbox {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: underline;
+  user-select: none;
+}
+
+.custom-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.custom-checkbox .checkmark::before {
+  content: "\2713";
+  font-size: 18px;
+  color: #fff;
+}
+
+.custom-checkbox input[type="checkbox"]:checked+.checkmark {
+  background-color: #000;
+  border-color: #000;
+}
+
+
+// <label class="callections-sidebar__label custom-checkbox"><input type="checkbox" /><span class="checkmark"></span><span>Knit Tops</span></label>'

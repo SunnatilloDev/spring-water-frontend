@@ -1,0 +1,40 @@
+.section_text {
+  text-align: center;
+  margin: 40px 0;
+  color: #31a7eb;
+  font-size: 35px;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+.section_scroll {
+  max-width: 100%;
+  overflow: hidden;
+  margin-bottom: 20px;
+
+  &_reversed {
+    padding-block: 1rem;
+    display: flex;
+    gap: 10px;
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll 20s linear reverse infinite;
+  }
+}
+
+.section_scroll_reversed_img {
+  width: 350px;
+  object-fit: contain;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
+@media screen and (max-width:630px) {
+  .section_text{
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,31 @@
+.collections {
+
+
+  &-wrapper {
+    display: flex;
+    margin-top: 32px;
+    gap: 20px;
+
+    @include media(900) {
+      flex-direction: column;
+      margin: 0;
+      gap: 10px;
+    }
+  }
+
+  &-aside {
+    width: 200px;
+
+    @include media(990) {
+      width: 160px;
+    }
+  }
+
+  &-main {
+    width: calc(100% - 200px);
+
+    @include media(900) {
+      width: 100%;
+    }
+  }
+}

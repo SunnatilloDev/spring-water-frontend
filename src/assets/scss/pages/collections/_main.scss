@@ -1,0 +1,457 @@
+.main {
+
+  &-head {
+    margin-bottom: 50px;
+
+    @include media (900) {
+      margin-bottom: 30px;
+    }
+
+    @include media(440) {
+      margin-bottom: 20px;
+    }
+
+    &__toptitle {
+      font-size: 12px;
+      color: $gray-300;
+      margin-bottom: 10px;
+    }
+
+    &__title {
+      color: $black;
+      font-size: 32px;
+      font-weight: 400;
+      margin-top: 10px;
+      line-height: 120%;
+
+      @include media(900) {
+        font-size: 28px;
+      }
+    }
+  }
+
+  &-products {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 20px;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+
+    @include media(1024) {
+      display: grid;
+      grid-template-columns: repeat(2, 2fr);
+      // grid-template-rows: repeat(18, 5.5%);
+    }
+
+    @include media(900) {
+      display: grid;
+      grid-template-columns: repeat(3, 2fr);
+      // grid-template-rows: repeat(12, 8%);
+    }
+
+    @include media(840) {
+      grid-template-columns: repeat(3, 2fr);
+      // grid-template-rows: repeat(12, 9%);
+    }
+
+    @include media(768) {
+      grid-template-columns: repeat(2, 2fr);
+      // grid-template-rows: repeat(18, 5.7%);
+    }
+
+    @include media(400) {
+      // grid-template-rows: repeat(18, 6.4%);
+    }
+  }
+
+  &-product {
+    max-width: 356px;
+    max-height: 540px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    @include media(900) {
+      max-width: 300px;
+      max-height: 520px;
+    }
+
+    @include media(840) {
+      max-width: 260px;
+      max-height: 460px;
+    }
+
+    @include media(800) {
+      max-width: 240px;
+      max-height: 400px;
+    }
+
+    @include media(768) {
+      max-width: 340px;
+      max-height: 500px;
+    }
+
+    @include media(680) {
+      max-width: 300px;
+      max-height: 480px;
+    }
+
+    @include media(620) {
+      max-width: 260px;
+      max-height: 400px;
+    }
+
+    @include media(560) {
+      max-width: 230px;
+      max-height: 380px;
+    }
+
+    @include media(500) {
+      max-width: 200px;
+      max-height: 340px;
+    }
+
+    @include media(440) {
+      max-width: 180px;
+      max-height: 280px;
+    }
+
+    @include media(400) {
+      max-width: 160px;
+      max-height: 250px;
+    }
+
+    @include media(375) {
+      max-width: 140px;
+      max-height: 230px;
+    }
+
+    &__row {
+      @include flex(baseline, space-between);
+    }
+
+    &__image {
+      max-width: 360px;
+      max-height: 440px;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+
+      @include media(900) {
+        max-width: 300px;
+        max-height: 340px;
+      }
+
+      @include media(840) {
+        max-width: 260px;
+        max-height: 320px;
+      }
+
+      @include media(800) {
+        max-width: 240px;
+        max-height: 300px;
+      }
+
+      @include media(768) {
+        max-width: 340px;
+        max-height: 420px;
+      }
+
+      @include media(680) {
+        max-width: 300px;
+        max-height: 340px;
+
+      }
+
+      @include media(620) {
+        max-width: 260px;
+        max-height: 320px;
+      }
+
+      @include media(560) {
+        max-width: 230px;
+        max-height: 280px;
+
+      }
+
+      @include media(500) {
+        max-width: 200px;
+        max-height: 260px;
+      }
+
+      @include media(440) {
+        max-width: 180px;
+        max-height: 220px;
+      }
+
+      @include media(400) {
+        max-width: 160px;
+        max-height: 200px;
+      }
+
+      @include media(375) {
+        max-width: 140px;
+        max-height: 180px;
+      }
+
+      &:hover>button {
+        bottom: 4px;
+        opacity: 1;
+        visibility: visible;
+      }
+
+      img {
+        max-width: 360px;
+        max-height: 440px;
+        width: 100%;
+        height: 100%;
+
+
+        @include media(900) {
+          max-width: 300px;
+          max-height: 340px;
+        }
+
+        @include media(840) {
+          max-width: 260px;
+          max-height: 360px;
+        }
+
+        @include media(800) {
+          max-width: 240px;
+          max-height: 300px;
+        }
+
+        @include media(768) {
+          max-width: 340px;
+          max-height: 420px;
+        }
+
+        @include media(680) {
+          max-width: 300px;
+          max-height: 340px;
+        }
+
+        @include media(620) {
+          max-width: 260px;
+          max-height: 320px;
+        }
+
+        @include media(560) {
+          max-width: 230px;
+          max-height: 280px;
+        }
+
+        @include media(500) {
+          max-width: 200px;
+          max-height: 260px;
+
+        }
+
+        @include media(440) {
+          max-width: 180px;
+          max-height: 220px;
+        }
+
+        @include media(400) {
+          max-width: 160px;
+          max-height: 200px;
+        }
+
+        @include media(375) {
+          max-width: 140px;
+          max-height: 180px;
+        }
+      }
+    }
+
+    &__title {
+      color: $black;
+      font-size: 12px;
+      font-weight: 400;
+      margin-top: 10px;
+
+      @include media(460) {
+        font-size: 10px;
+      }
+    }
+
+    &__price {
+      color: $black;
+      font-size: 12px;
+      font-weight: 600;
+
+      @include media(460) {
+        font-size: 10px;
+        padding-left: 6px;
+      }
+    }
+
+    &__subtitle {
+      color: $gray-300;
+      font-size: 12px;
+      font-weight: 400;
+      margin-top: 2px;
+
+      @include media(460) {
+        font-size: 10px;
+      }
+
+    }
+
+    &__cart {
+      width: calc(100% - 28px);
+      height: 40px;
+      margin: 14px;
+      font-size: 12px;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      background-color: $white;
+      text-transform: uppercase;
+      z-index: 100;
+      opacity: 0;
+      visibility: hidden;
+      @include trn();
+
+      @include media(768) {
+        display: none;
+      }
+
+      &_span {
+        position: absolute;
+        top: 12px;
+        right: 16px;
+      }
+    }
+
+    &__buttons {
+      margin-top: 8px;
+      display: flex;
+      gap: 10px;
+
+      @include media(440) {
+        display: none;
+      }
+    }
+
+    &__button {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+
+      @include media (900) {
+        width: 18px;
+        height: 18px;
+      }
+
+      &.black {
+        background-color: black;
+      }
+
+      &.deep.blue {
+        background-color: #2e5283;
+      }
+
+      &.beech {
+        background-color: #5b4f3b;
+      }
+
+      &.seagrass {
+        background-color: #959889;
+      }
+
+      &.navy {
+        background-color: #394868;
+      }
+
+      &.parchment {
+        background-color: #dfd1be;
+      }
+
+      &.spring.lake {
+        background-color: #667e91;
+      }
+
+      &.white {
+        background-color: #f4f9ff;
+      }
+
+      &.brown {
+        background-color: #906652;
+      }
+
+      &.grey {
+        background-color: #cbc5c1;
+      }
+
+      &.orange {
+        background-color: #f68d2e;
+      }
+
+      &.green {
+        background-color: #62664d;
+      }
+
+      &.cornstalk.chambray {
+        background-color: #a9947a;
+      }
+
+      &.heather.oatmeal {
+        background-color: #ccc5b5;
+      }
+
+      &.kalamata {
+        background-color: #5f5c4c;
+      }
+
+      &.trench.coat.khaki {
+        background-color: rgb(170, 157, 137);
+      }
+
+      &.toasted.coconut {
+        background-color: #8b6a4f;
+      }
+
+      &.blue {
+        background-color: #34414e;
+      }
+
+      &.cornstalk {
+        background-color: #a9947a;
+      }
+
+      &.light.blue {
+        background-color: #cdd7e3;
+      }
+
+      &.slate.grey {
+        background-color: #49494d;
+      }
+
+      &.sage.green {
+        background-color: #888d82;
+      }
+
+      &.hid.heathered.grey {
+        background-color: #b1b3b3;
+      }
+
+      &.heathered.cashew {
+        background-color: #ceb899;
+      }
+
+      &.scarab {
+        background-color: #23312d;
+
+      }
+
+      &.deep.moss.green {
+        background-color: #414832;
+      }
+    }
+  }
+
+}

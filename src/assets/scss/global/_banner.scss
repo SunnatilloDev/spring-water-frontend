@@ -1,0 +1,233 @@
+.banner {
+  width: 100%;
+  margin: 0 auto !important;
+  margin-top: 65px !important;
+  overflow: hidden;
+  position: relative;
+  height: 850px; /* Restored to match Figma design */
+  padding: 20px;
+
+  &-wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+    height: 100%;
+  }
+
+  &-swiper {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+  }
+  .slide-content {
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  &_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+  }
+  &_item_1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+    padding-right: 20px;
+  }
+  &_btn {
+    width: 150px;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+
+    background: rgba(60, 255, 0, 0.37);
+    box-shadow: 1px solid;
+    &_children {
+      color: white;
+      font-size: 22px;
+    }
+  }
+  &_item_children {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &_childern {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 300px;
+    color: $gray-100;
+    font-size: 30px;
+  }
+  &_img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+  }
+  &_img1 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+  }
+}
+.banner_item_text {
+  color: steelblue;
+  font-weight: 400;
+  line-height: 22px;
+  font-size: 16px;
+  max-width: 100%;
+  text-align: left;
+  margin-top: 20px;
+}
+@media screen and (max-width: 970px) {
+  .banner_item_text {
+    line-height: 17px;
+    font-size: 14px;
+    width: 450px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .banner_item_text {
+    line-height: 17px;
+    font-size: 14px;
+    width: 400px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .banner {
+    height: 450px; /* Fixed height for mobile */
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .banner {
+    height: 600px; /* Fixed height for tablets */
+    padding-bottom: 30px;
+  }
+
+  .banner-wrapper {
+    height: 100%;
+  }
+
+  .banner_item {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+
+  .banner_item_text {
+    color: steelblue;
+    width: 100%;
+    text-align: center;
+  }
+
+  .banner_item_1_img {
+    display: flex;
+    justify-content: center;
+  }
+
+  .banner_img1 {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .banner_item_1 {
+    width: 100%;
+    align-items: center;
+    padding-right: 0;
+  }
+
+  .banner_img {
+    max-height: 300px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .slide-content {
+    height: auto;
+    padding: 30px 20px;
+  }
+}
+
+/* Swiper custom styles */
+.banner .swiper-button-next,
+.banner .swiper-button-prev {
+  display: none !important;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: #31a7eb;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.banner .swiper-slide {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  aspect-ratio: 16/9;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover !important;
+  object-position: center;
+  display: block;
+  aspect-ratio: 16/9;
+}
+
+/* Specific positioning for each slide if needed */
+.hero-image-0 {
+  object-position: center;
+}
+
+.hero-image-1 {
+  object-position: center;
+}
+
+.hero-image-2 {
+  object-position: center;
+}
+
+.banner .swiper-pagination {
+  bottom: 20px !important;
+}
+
+/* Smoother transitions between slides */
+.banner .swiper-slide-active {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,170 @@
+.kontact {
+  background: linear-gradient(180deg,
+      rgba(137, 222, 255, 0.05) 1%,
+      rgb(76, 182, 225, 0.3) 100%);
+  padding: 30px 0;
+
+  &_children {
+    display: flex;
+    align-items: center;
+    border-radius: 0 8px 8px 0px;
+    background-color: white;
+    width: 75%;
+    height: 100%;
+  }
+}
+
+.kontact_btn {
+  cursor: pointer;
+  background: #00bb31;
+  display: flex;
+  align-items: center;
+  border-radius: 7px;
+  padding: 8px;
+
+  // margin-top: 160px;
+  &_btn {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    padding: 8px;
+  }
+}
+
+.kontact_form {
+  padding: 40px;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+
+  &_text {
+    font-size: 40px;
+  }
+
+  &_children {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+.kontact_input>input {
+  font-size: 27px;
+  outline: none;
+  border: none;
+  border: 1px solid gray;
+  border-radius: 7px;
+  padding: 24px;
+}
+
+.kontact_left_rigth {
+  background: #eee;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.kontact_children_item {
+  display: flex;
+  height: 455px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.kontact_input_children {
+  width: 600px;
+}
+
+.kontact_left {
+  display: flex;
+  padding-left: 50px;
+  flex-direction: column;
+  gap: 10px;
+
+  &_text {
+    font-size: 24px;
+    color: #000000;
+    font-weight: 700;
+  }
+}
+
+.kontact_icons_tel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.kontact_tel {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.kontact_icons {
+  font-weight: 700;
+}
+
+.kontact_email {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &_text {
+    font-size: 25px;
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 1158px) {
+  .kontact_input_children {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 1053px) {
+  .kontact_input_children {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .kontact_children_item {
+    align-items: flex-start;
+    padding: 0;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+  }
+
+  .kontact_input_children {
+    width: 100%;
+  }
+
+  .kontact_children {
+    width: 100% !important;
+  }
+
+  .kontact_form_children {
+    flex-direction: column;
+  }
+
+  .kontact_btn {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .kontact_left {
+    padding: 15px;
+  }
+
+  .kontact_left_rigth {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 398px) {
+  .kontact_form_text {
+    font-size: 30px;
+  }
+}

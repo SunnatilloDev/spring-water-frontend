@@ -1,0 +1,124 @@
+.products {
+  background-image: url("https://storage.needpix.com/rsynced_images/light-blue-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%;
+  width: 100%;
+  padding: 40px 0;
+
+  &_text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    gap: 10px;
+  }
+
+  &_text_bottom {
+    font-size: 25px;
+    font-weight: 500;
+    color: #32a2d2;
+    line-height: 30px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  &_text_top {
+    padding-top: 35px;
+    color: #32a2d2;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 25px;
+  }
+}
+
+.products_card {
+  background-color: white;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 20px;
+  width: 100%;
+
+  &_text {
+    color: #32a2d2;
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 500;
+    
+  }
+  &_title{
+    color: #32a2d2;
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 500;
+  }
+}
+
+.product_card_text_btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.products_card_img_item_1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.products {
+  width: 100%;
+}
+
+.products_card_img {
+  object-fit: contain;
+  height: 250px;
+  width: 100%;
+}
+
+.products_card_btn {
+  text-align: center;
+  width: 200px;
+  border-radius: 5px;
+  padding:  12px;
+  cursor: pointer;
+  background-color: #31a7eb;
+
+  &_children {
+    font-weight: 500;
+    color: white;
+    font-size: 25px;
+    line-height: 32px;
+  }
+}
+
+.slick-track {
+  display: flex;
+  gap: 10px;
+}
+
+.slick-arrow {
+  display: none !important;
+}
+@media screen and (max-width:460px) {
+  .products_text_top{
+    font-size: 30px;
+  }
+  .products_text_bottom{
+    font-size: 21px;
+  }
+}
+@media screen and (max-width:355px) {
+  .products_text_top{
+    font-size: 24px;
+  }
+  .products_text_bottom{
+    font-size: 17px;
+  }
+}
