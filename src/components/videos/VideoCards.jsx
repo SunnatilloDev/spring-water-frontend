@@ -6,11 +6,6 @@ import video1 from "../../assets/imgs/IMG_7040-Czn9OlZc.mp4";
 import video2 from "../../assets/imgs/IMG_6976-xkSezMbL.mp4";
 import video3 from "../../assets/imgs/IMG_7828-DPWcEs5J.mp4";
 
-// Import thumbnail images for videos
-import hero1 from "../../assets/imgs/hero1.png";
-import hero2 from "../../assets/imgs/hero2.png";
-import hero3 from "../../assets/imgs/hero3.png";
-
 const VideoCards = () => {
   const { t } = useTranslation();
 
@@ -19,17 +14,14 @@ const VideoCards = () => {
     {
       id: 1,
       source: video1,
-      poster: hero1,
     },
     {
       id: 2,
       source: video3,
-      poster: hero3,
     },
     {
       id: 3,
       source: video2,
-      poster: hero2,
     },
   ];
 
@@ -49,7 +41,6 @@ const VideoCards = () => {
                   loop
                   muted
                   playsInline
-                  poster={video.poster}
                   preload="auto"
                 >
                   <source src={video.source} type="video/mp4" />

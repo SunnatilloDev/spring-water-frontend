@@ -107,7 +107,51 @@
 }
 @media screen and (max-width: 576px) {
   .banner {
-    height: 450px; /* Fixed height for mobile */
+    height: 350px !important; /* Larger height for phones */
+    padding: 10px;
+    margin-top: 50px !important; /* Smaller top margin */
+    max-height: 350px !important;
+  }
+
+  .banner-wrapper {
+    height: 100% !important;
+    max-height: 350px !important;
+  }
+
+  .banner-swiper {
+    height: 100% !important;
+    max-height: 350px !important;
+    border-radius: 15px !important; /* Moderate border radius for phones */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important; /* Moderate shadow */
+  }
+
+  .banner .swiper-pagination {
+    bottom: 10px !important; /* Pagination dots position */
+  }
+
+  .swiper-pagination-bullet {
+    width: 8px !important;
+    height: 8px !important;
+  }
+
+  .banner .swiper-slide {
+    height: 100% !important;
+    max-height: 350px !important;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .banner {
+    height: 300px !important; /* Larger height for small phones */
+    max-height: 300px !important;
+    padding: 8px;
+  }
+
+  .banner-wrapper,
+  .banner-swiper,
+  .banner .swiper-slide {
+    height: 100% !important;
+    max-height: 300px !important;
   }
 }
 

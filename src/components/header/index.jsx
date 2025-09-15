@@ -66,9 +66,21 @@ function Header({ changeLang }) {
                 <Link to={"/company"} className="header-link">
                   {t("about")}
                 </Link>
-                <a className="header-link" href="#products">
+                <Link
+                  className="header-link"
+                  to="/#products"
+                  onClick={() => {
+                    setTimeout(() => {
+                      const productsSection =
+                        document.getElementById("products");
+                      if (productsSection) {
+                        productsSection.scrollIntoView({ behavior: "smooth" });
+                      }
+                    }, 100);
+                  }}
+                >
                   {t("brand")}
-                </a>
+                </Link>
                 <Link className="header-link" to="/delivery">
                   {t("delivery")}
                 </Link>

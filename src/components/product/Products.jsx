@@ -1,12 +1,12 @@
 import Slider from "react-slick";
 
 import { useTranslation } from "react-i18next";
-import litr05 from "../../assets/imgs/0.5-poland-spring.png";
-import litr1 from "../../assets/imgs/1-poland-spring.png";
-import litr15 from "../../assets/imgs/1__5litr_poland_spring.png";
-import litr5 from "../../assets/imgs/5litr.png";
-import litr10 from "../../assets/imgs/10l-poland-spring.png";
-import litr19 from "../../assets/imgs/water18.9litr.png";
+import litr05 from "../../assets/imgs/bottles/bottle_0.5l.png";
+import litr1 from "../../assets/imgs/bottles/bottle_1l_1_5l.png";
+import litr15 from "../../assets/imgs/bottles/bottle_1l_1_5l.png";
+import litr5 from "../../assets/imgs/bottles/bottle_5l.png";
+import litr10 from "../../assets/imgs/bottles/bottle_10l.png";
+import litr19 from "../../assets/imgs/bottles/bottle_19l.png";
 
 // import translationsUz from "../locale/translationsUz";
 

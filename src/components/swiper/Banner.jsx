@@ -53,6 +53,7 @@ const Banner = () => {
           speed={500}
           grabCursor={true}
           className="banner-swiper"
+          style={{ height: "100%" }}
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={slide.id}>
