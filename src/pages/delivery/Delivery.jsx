@@ -1,28 +1,28 @@
-import {axios} from "axios";
+import axios from "axios";
 import { useTranslation } from "react-i18next";
 import deliveryVan from "../../assets/imgs/deliverguy.png";
 
 const Delivery = () => {
   const SendMessage = (event) => {
     event.preventDefault();
-    const token = "8407813211:AAEIxYNruJGZu7Z8I7EegdCPXNK5Dbmldcw";
-    const chat_id = 67006091019;
+    const token = "8313036544:AAGg9qbi3u389Dj-IRB0KY_IazRdapZOG_o";
+    const chat_id = "-4641622084";
     const url = `https://api.telegram.org/bot${token}/sendMessage`;
     const name = document.getElementById("name").value;
     const surname = document.getElementById("surname").value;
     axios({
       url: url,
-      method: 'POST',
+      method: "POST",
       data: {
-        "chat_id": chat_id,
-        "text": name,
+        chat_id: chat_id,
+        text: name,
       },
     })
       .then((res) => {
         alert("Muvaffaqiyatli yuborildi");
       })
       .catch((error) => {
-        alert("Yuborishda xatolik",error);
+        alert("Yuborishda xatolik", error);
       });
   };
 

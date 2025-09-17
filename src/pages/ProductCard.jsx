@@ -74,7 +74,7 @@ const ProductCard = () => {
         },
       },
     ],
-  }
+  };
 
   return (
     <div id="ProductCard">
@@ -87,7 +87,7 @@ const ProductCard = () => {
           <div className="slider-container">
             <Slider {...settings}>
               {Product.map((item) => (
-                <div className="products-img_1">
+                <div key={item.id} className="products-img_1">
                   <img
                     className="products-img_children"
                     src={item.img}
