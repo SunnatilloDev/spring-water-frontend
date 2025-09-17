@@ -1,7 +1,7 @@
 import ProductCard from "./ProductCard";
 import spring from "../assets/imgs/spring-removebg-preview(1).png";
 import epidimiologik from "../assets/imgs/epidimiologik.jpg";
-import ekbaklashka from "../assets/imgs/ekbaklashka.jpg";
+import ekbaklashka from "../assets/imgs/1.5literspring_logo.jpg";
 import { useTranslation } from "react-i18next";
 
 const Card = () => {

@@ -1,27 +1,32 @@
-import React, { useState } from "react";
+import {axios} from "axios";
 import { useTranslation } from "react-i18next";
-import toast from "react-hot-toast";
-import deliveryVan from "../../assets/imgs/deliverguy.png"; // Using a placeholder image, you can replace it
+import deliveryVan from "../../assets/imgs/deliverguy.png";
 
 const Delivery = () => {
-  const { t } = useTranslation();
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [loading, setLoading] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoading(true);
-
-    // Here you would typically make an API call to submit the form
-    // For now, we'll just simulate it with a timeout
-    setTimeout(() => {
-      toast.success(t("orderSuccess") || "Your order has been received!");
-      setName("");
-      setPhone("");
-      setLoading(false);
-    }, 1000);
+  const SendMessage = (event) => {
+    event.preventDefault();
+    const token = "8407813211:AAEIxYNruJGZu7Z8I7EegdCPXNK5Dbmldcw";
+    const chat_id = 67006091019;
+    const url = `https://api.telegram.org/bot${token}/sendMessage`;
+    const name = document.getElementById("name").value;
+    const surname = document.getElementById("surname").value;
+    axios({
+      url: url,
+      method: 'POST',
+      data: {
+        "chat_id": chat_id,
+        "text": name,
+      },
+    })
+      .then((res) => {
+        alert("Muvaffaqiyatli yuborildi");
+      })
+      .catch((error) => {
+        alert("Yuborishda xatolik",error);
+      });
   };
+
+  const { t } = useTranslation();
 
   return (
     <div className="delivery-page">
@@ -34,41 +39,43 @@ const Delivery = () => {
             <h2 className="delivery-title">
               {t("deliveryTitle") || "Buyurtma berish"}
             </h2>
-            <p className="delivery-subtitle">
-              {t("deliverySubtitle") ||
-                "Bizda O'zbekiston bo'ylab yetkazib berish bepul!"}
-            </p>
-            <form onSubmit={handleSubmit} className="order-form">
-              <div className="form-group">
-                <input
-                  type="text"
-                  placeholder={t("name") || "Ismingiz"}
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  required
-                  className="form-input"
-                />
+
+            <form id="MyForm" onSubmit={SendMessage}>
+              <div>
+                <input type="text" id="name" />
               </div>
-              <div className="form-group">
-                <input
-                  type="tel"
-                  placeholder={t("phone") || "Telefon"}
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                  required
-                  className="form-input"
-                />
+              <div>
+                <input type="text" id="surname" />
               </div>
-              <div className="form-group">
-                <button
-                  type="submit"
-                  className="submit-button"
-                  disabled={loading}
-                >
-                  {loading ? t("sending") : t("send") || "Yuborish"}
-                </button>
+              <div>
+                <button type="submit">Yuborish</button>
               </div>
             </form>
+
+            {/* <form className="order-form" onSubmit={SendMessage}>
+              <div className="form-group">
+                <input
+                  id="name"
+                  type="text"
+                  placeholder={t("name") || "Ismingiz"}
+                  className="form-input"
+                />
+              </div>
+              <div className="form-group">
+                <input
+                  id="surname"
+                  type="tel"
+                  placeholder={t("phone") || "Telefon"}
+                  required
+                  className="form-input"
+                />
+              </div>
+              <div className="form-group">
+                <button type="submit" className="submit-button">
+                  Yuborish
+                </button>
+              </div>
+            </form> */}
           </div>
         </div>
       </div>

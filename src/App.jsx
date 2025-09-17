@@ -13,8 +13,7 @@ function App() {
         <Banner />
         <Products />
         <VideoCards />
-
-        <OurColleagues />
+        {/* <OurColleagues /> */}
         <Card />
         <Kontact />
       </main>

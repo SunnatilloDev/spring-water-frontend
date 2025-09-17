@@ -6,44 +6,43 @@ import { MdOutlineMailOutline } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { MdChevronRight } from "react-icons/md";
 
-
 const Contacts = () => {
-  const [loading, setloading] = useState(false)
+  const [loading, setloading] = useState(false);
   function handleSubmit(e) {
-    setloading(true)
-    e.preventDefault()
-    const name = e.target[0].value
-    const phone = e.target[1].value
-    const token = "6999337379:AAH5ALbyRBCrcNy0AUsbJ7eM56eH3hJz2ps"
-    const chatId = -1002202084196
-    const url = `https://api.telegram.org/bot${token}/sendMessage`
-    const message = `Ism: ${name} \nTelofon: ${phone}`
+    setloading(true);
+    e.preventDefault();
+    const name = e.target[0].value;
+    const phone = e.target[1].value;
+    const token = "6999337379:AAH5ALbyRBCrcNy0AUsbJ7eM56eH3hJz2ps";
+    const chatId = -1002202084196;
+    const url = `https://api.telegram.org/bot${token}/sendMessage`;
+    const message = `Ism: ${name} \nTelofon: ${phone}`;
     axios({
       url: url,
-      method: 'POST',
+      method: "POST",
       data: {
-        "chat_id": chatId,
-        "text": message
-      }
-    }).then((res) => {
-      toast.success('Muvaffaqiyatli yuborldi!')
-      e.target[0].value = ''
-      e.target[1].value = ''
-    }).catch((err) => {
-      toast.error('Yuborishda xatolik!')
-      console.log(err);
-    }).finally(() => (
-      setloading(false)
-    ))
+        chat_id: chatId,
+        text: message,
+      },
+    })
+      .then((res) => {
+        toast.success("Muvaffaqiyatli yuborldi!");
+        e.target[0].value = "";
+        e.target[1].value = "";
+      })
+      .catch((err) => {
+        toast.error("Yuborishda xatolik!");
+        console.log(err);
+      })
+      .finally(() => setloading(false));
   }
   return (
-    <div className="kontact " >
+    <div className="kontact ">
       <div className="container">
         <div className="contacts">
           <div className="contacts_icons_text">
             <div>
-              <Link to={'/'}>
-
+              <Link to={"/"}>
                 <span className="contacts_left">Bosh sahifa </span>
               </Link>
             </div>
@@ -62,11 +61,13 @@ const Contacts = () => {
                 <span className="kontact_left_text">Aloqa</span>
               </div>
               <div className="kontact_icons_tel">
-                <div >
+                <div>
                   <BsTelephone size={25} />
                 </div>
                 <div>
-                  <span className="kontact_tel">+998991234567</span>
+                  <span className="contacts_tel_2">
+                    <Link to={"tel:+998999608877"}>+998999608877</Link>
+                  </span>
                 </div>
               </div>
               <div className="kontact_email">
@@ -74,30 +75,67 @@ const Contacts = () => {
                   <MdOutlineMailOutline size={29} />
                 </div>
                 <div>
-                  <span className="kontact_email_text">info@spring.uz
-
-                  </span>
+                  <span className="kontact_email_text">info@spring.uz</span>
                 </div>
               </div>
             </div>
             <div className="kontact_children" id="btn">
-              <form onSubmit={handleSubmit} >
+              <form onSubmit={handleSubmit}>
                 <div className="kontact_form_children">
                   <div className="kontact_form">
                     <h1 className="kontact_form_text">Buyurtma berish</h1>
                     <div className="kontact_input">
-                      <input placeholder="Ismingizni yozing" className="kontact_input_children" required type="name" />
+                      <input
+                        placeholder="Ismingizni yozing"
+                        className="kontact_input_children"
+                        required
+                        type="name"
+                      />
                     </div>
                     <div className="kontact_input">
-                      <input placeholder="Телефон" className="kontact_input_children" pattern="[0-9]{5}[-][0-9]{7}[-][0-9]{1}" required type="number" id="phone" />
+                      <input
+                        placeholder="Телефон"
+                        className="kontact_input_children"
+                        pattern="[0-9]{5}[-][0-9]{7}[-][0-9]{1}"
+                        required
+                        type="number"
+                        id="phone"
+                      />
                     </div>
                   </div>
                   <div className="kontact_btn">
-                    <div >
-                      <button type="submit" loading={loading} className="kontact_btn_btn">{loading ? 'Yuborilmoqda...' : 'Yuborish'} </button>
+                    <div>
+                      <button
+                        type="submit"
+                        loading={loading}
+                        className="kontact_btn_btn"
+                      >
+                        {loading ? "Yuborilmoqda..." : "Yuborish"}{" "}
+                      </button>
                     </div>
                     <div>
-                      <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M26.2813 4.88911L2.99038 11.4584C2.79444 11.5136 2.62003 11.6274 2.49047 11.7844C2.36091 11.9415 2.28237 12.1343 2.26534 12.3372C2.24832 12.5401 2.29362 12.7433 2.39519 12.9197C2.49676 13.0962 2.64977 13.2374 2.83376 13.3246L13.5351 18.3936C13.7438 18.4925 13.9119 18.6605 14.0108 18.8693L19.0798 29.5706C19.167 29.7546 19.3082 29.9076 19.4846 30.0092C19.6611 30.1108 19.8643 30.1561 20.0672 30.139C20.2701 30.122 20.4629 30.0435 20.6199 29.9139C20.777 29.7843 20.8907 29.6099 20.946 29.414L27.5153 6.12302C27.5635 5.95194 27.5653 5.77108 27.5204 5.59908C27.4755 5.42708 27.3856 5.27015 27.2599 5.14446C27.1342 5.01876 26.9773 4.92884 26.8053 4.88396C26.6333 4.83908 26.4524 4.84086 26.2813 4.88911Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M13.8579 18.5465L19.5148 12.8896" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      <svg
+                        width="32"
+                        height="33"
+                        viewBox="0 0 32 33"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M26.2813 4.88911L2.99038 11.4584C2.79444 11.5136 2.62003 11.6274 2.49047 11.7844C2.36091 11.9415 2.28237 12.1343 2.26534 12.3372C2.24832 12.5401 2.29362 12.7433 2.39519 12.9197C2.49676 13.0962 2.64977 13.2374 2.83376 13.3246L13.5351 18.3936C13.7438 18.4925 13.9119 18.6605 14.0108 18.8693L19.0798 29.5706C19.167 29.7546 19.3082 29.9076 19.4846 30.0092C19.6611 30.1108 19.8643 30.1561 20.0672 30.139C20.2701 30.122 20.4629 30.0435 20.6199 29.9139C20.777 29.7843 20.8907 29.6099 20.946 29.414L27.5153 6.12302C27.5635 5.95194 27.5653 5.77108 27.5204 5.59908C27.4755 5.42708 27.3856 5.27015 27.2599 5.14446C27.1342 5.01876 26.9773 4.92884 26.8053 4.88396C26.6333 4.83908 26.4524 4.84086 26.2813 4.88911Z"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                        <path
+                          d="M13.8579 18.5465L19.5148 12.8896"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
                     </div>
                   </div>
                 </div>
@@ -107,7 +145,7 @@ const Contacts = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Contacts
+export default Contacts;

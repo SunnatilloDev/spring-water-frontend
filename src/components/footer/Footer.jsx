@@ -35,30 +35,17 @@ const Footer = () => {
             </div>
           </div>
           <div className="footer_children_1">
-            <div className="footer_1">
+            <div className="footer_children___1">
               <div className="footer_1_icon">
                 <HiOutlineMapPin className="footer_1_icons" size={45} />
               </div>
-              <div className="footer_1_children">
-                <div>
+              <div className="footer-1">
+                <div className="footer_1_children">
                   <p className="footer_1_children_text">{t("Tous")}</p>
                 </div>
-                <div>
-                  <p className="footer_1_children_text_1">urganch</p>
-                </div>
-              </div>
-            </div>
-            <div className="footer_2">
-              <div className="footer_2_icon">
-                <BsFillTelephoneMinusFill size={25} />
-              </div>
-              <div className="footer_2_children">
-                <div>
-                  <p className="footer_2_text">{t("call")}</p>
-                </div>
-                <div>
-                  <div className="footer_2_text_2">
-                    <Link to={"tel:+998904318111"}>998904318111</Link>
+                <div className="footer_2">
+                  <div className="footer_2_children">
+                    <p className="footer_2_text">{t("call")}</p>
                   </div>
                 </div>
               </div>

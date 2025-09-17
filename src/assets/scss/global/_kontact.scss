@@ -39,13 +39,23 @@
   gap: 34px;
 
   &_text {
-    font-size: 40px;
+    font-size: 30px;
   }
 
   &_children {
     display: flex;
     align-items: center;
     gap: 5px;
+  }
+  @media (max-width: 510px) {
+    &_text{
+      font-size: 15px;
+    }
+  }
+  @media (max-width: 370px) {
+    &_text{
+      font-size: 12px;
+    }
   }
 }
 

@@ -1,8 +1,6 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
 
-// Import slick carousel css
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import waterDropImage from "../../assets/imgs/aboutimg.jpg"; // Using a placeholder water drop image

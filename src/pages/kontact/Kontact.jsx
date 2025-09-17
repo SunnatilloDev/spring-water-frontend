@@ -4,6 +4,7 @@ import { useState } from "react";
 import { BsTelephone } from "react-icons/bs";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const Kontact = () => {
   const { t } = useTranslation();
@@ -51,7 +52,9 @@ const Kontact = () => {
                   <BsTelephone size={25} />
                 </div>
                 <div>
-                  <span className="kontact_tel">+998991234567</span>
+                  <span className="kontact_tel">
+                    <Link to={"tel:+998999608877"}>+998999608877</Link>
+                  </span>
                 </div>
               </div>
               <div className="kontact_email">
