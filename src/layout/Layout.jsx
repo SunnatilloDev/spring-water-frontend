@@ -13,18 +13,15 @@ i18n.use(initReactI18next).init({
   resources: {
     en: { translation: translationsEn },
     uz: { translation: translationsUz },
-    Ru: { translation: translationsRu },
-
+    ru: { translation: translationsRu },
   },
   lng: "uz",
-  fallbacking: "en",
-  fallbacking: "ru",
+  fallbackLng: ["en", "ru"],
 });
 
 const Layout = () => {
   const changeLang = (value) => {
     i18n.changeLanguage(value);
-
   };
 
   return (
