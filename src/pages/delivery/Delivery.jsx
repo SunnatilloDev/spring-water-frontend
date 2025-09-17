@@ -40,15 +40,27 @@ const Delivery = () => {
               {t("deliveryTitle") || "Buyurtma berish"}
             </h2>
 
-            <form id="MyForm" onSubmit={SendMessage}>
-              <div>
-                <input type="text" id="name" />
+            <form className="myform" id="MyForm" onSubmit={SendMessage}>
+              <div className="myform_input">
+                <div>
+                  <input
+                    placeholder="Ismingiz"
+                    className="myform_input_top"
+                    type="text"
+                    id="name"
+                  />
+                </div>
+                <div>
+                  <input
+                    placeholder="Telfon"
+                    className="myform_input_top"
+                    type="text"
+                    id="surname"
+                  />
+                </div>
               </div>
               <div>
-                <input type="text" id="surname" />
-              </div>
-              <div>
-                <button type="submit">Yuborish</button>
+                <button className="myform_btn" type="submit">Yuborish</button>
               </div>
             </form>
 

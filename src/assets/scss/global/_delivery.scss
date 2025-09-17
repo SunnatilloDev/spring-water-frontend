@@ -1,3 +1,32 @@
+.myform {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  &_input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    &_top {
+      font-size: 27px;
+      outline: none;
+      border: none;
+      border: 1px solid gray;
+      border-radius: 7px;
+      padding: 15px;
+    }
+  }
+}
+.myform_btn {
+  cursor: pointer;
+  background: #00bb31;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  border-radius: 7px;
+  padding: 15px 25px;
+}
+
 .delivery-page {
   padding: 120px 0 60px;
   background: linear-gradient(180deg, #e8f7ff 0%, #ffffff 100%);
@@ -60,14 +89,10 @@
 }
 
 .delivery-title {
-  font-size: 32px;
+  font-size: 20px;
   font-weight: 700;
   margin: 0 0 15px;
   color: #222;
-
-  @media (max-width: 768px) {
-    font-size: 28px;
-  }
 }
 
 .delivery-subtitle {
@@ -146,4 +171,24 @@
     padding: 12px 15px !important;
   }
 }
-
+@media (max-width: 1190px) {
+  .myform {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .myform_input_top {
+    width: 100%;
+  }
+}
+@media (max-width: 404px) {
+  .delivery-title {
+    font-size: 17px;
+  }
+  .myform_btn {
+    padding: 10px 15px;
+  }
+  .myform_input_top{
+    font-size: 20px;
+  }
+}

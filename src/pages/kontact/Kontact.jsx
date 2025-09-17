@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const Kontact = () => {
   const { t } = useTranslation();
   const [loading, setloading] = useState(false);
-  function handleSubmit(e) {
+  function handleSubmitInput(e) {
     setloading(true);
     e.preventDefault();
     const name = e.target[0].value;
@@ -67,7 +67,7 @@ const Kontact = () => {
               </div>
             </div>
             <div className="kontact_children" id="btn">
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmitInput}>
                 <div className="kontact_form_children">
                   <div className="kontact_form">
                     <h1 className="kontact_form_text">{t("order")}</h1>
